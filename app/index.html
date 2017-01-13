@@ -6,15 +6,9 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <script src="bower_components/angular/angular.js"></script>
     <script src="js/controllers.js"></script>    
-    
+    <script src="js/phone-list.component.js"></script>
   </head>
-  <body ng-controller="PhoneListController">
-    <ul>
-      <li ng-repeat="phone in phones">
-        <span>{{ phone.name }}</span>
-        <span>{{ phone.snippet }}</span>
-      </li>
-      <p>Total number of phones: {{ phones.length }}</p>
-    </ul>
+  <body>
+     <phone-list></phone-list>
   </body>
 </html>
