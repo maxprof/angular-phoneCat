@@ -1,7 +1,7 @@
 angular
     .module('phoneCat')
     .component('phoneList', {
-        templateUrl: '../partials/phone-list.html',
+        templateUrl: 'phone-list/phone-list.html',
         controller: function PhoneListController() {
             this.phones = [
             {
