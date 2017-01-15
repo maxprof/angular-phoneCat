@@ -2,8 +2,17 @@
 
 <h1>{{$ctrl.phone.name}}</h1>
 
-<p>{{$ctrl.phone.description}}</p>
+<input type="text" ng-model="userInput">
 
+<h1>{{ userInput | uppercase }}</h1>
+
+<p>{{$ctrl.phone.description}}</p>
+<dl>
+  <dt>Infrared</dt>
+  <dd>{{$ctrl.phone.connectivity.infrared | checkmark}}</dd>
+  <dt>GPS</dt>
+  <dd>{{$ctrl.phone.connectivity.gps | checkmark}}</dd>
+</dl>
 <ul class="phone-thumbs">
   <li ng-repeat="img in $ctrl.phone.images">
     <img ng-src="{{img}}" />
