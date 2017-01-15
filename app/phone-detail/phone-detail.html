@@ -3,7 +3,11 @@
 <h1>{{$ctrl.phone.name}}</h1>
 <input type="text" ng-model="userInput">
 <h1>{{ userInput | uppercase }}</h1>
-
+<div class="phone-images">
+  <img ng-src="{{img}}" class="phone"
+      ng-class="{selected: img === $ctrl.mainImageUrl}"
+      ng-repeat="img in $ctrl.phone.images" />
+</div>
 <p>{{$ctrl.phone.description}}</p>
 <dl>
   <dt>Infrared</dt>

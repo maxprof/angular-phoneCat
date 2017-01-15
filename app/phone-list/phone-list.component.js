@@ -14,5 +14,5 @@ angular
                self.phones = phones;
             });
         }
-        ]
+    ]
 });
