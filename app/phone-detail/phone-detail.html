@@ -1,6 +1,6 @@
 <img ng-src="{{$ctrl.phone.images[0]}}" class="phone" />
 
-<h1>{{$ctrl.phone.name}}</h1>
+<h1 class="phoneName">{{$ctrl.phone.name}}</h1>
 <input type="text" ng-model="userInput">
 <h1>{{ userInput | uppercase }}</h1>
 <div class="phone-images">
@@ -16,7 +16,7 @@
   <dd>{{$ctrl.phone.connectivity.gps | checkmark}}</dd>
 </dl>
 <img ng-src="{{$ctrl.mainImageUrl}}" class="phone" />
-
+<p>{{ $ctrl.phone.display.touchScreen }}</p>
 <ul class="phone-thumbs">
   <li ng-repeat="img in $ctrl.phone.images">
     <img ng-src="{{img}}" ng-click="$ctrl.setImage(img)" ng-dblclick="$ctrl.dblClick(img)"/>

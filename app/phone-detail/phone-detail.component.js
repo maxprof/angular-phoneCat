@@ -4,9 +4,9 @@ angular.
     templateUrl: 'phone-detail/phone-detail.html',
     controller: ['Phone','$routeParams',
       function PhoneDetailController(Phone, $routeParams) {
-        var self = this;
-        
+        var self = this;    
         self.setImage = function setImage(imageUrl) {
+          console.log(imageUrl);
           self.mainImageUrl = imageUrl;
         };
 
@@ -18,6 +18,8 @@ angular.
         //     self.phone = res.data;
         //     self.setImage(self.phone.images[0]);
         // })
+        
+     
 
         self.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
           self.setImage(phone.images[0]);
